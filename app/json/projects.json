@@ -1,0 +1,174 @@
+{
+	"projects": [
+		{
+			"project": {
+				"name":"Mobomo",
+				"customer":"Mobomo, LLC",
+				"category":"Mobile",
+				"status":"open",
+				"start_date":"",
+				"end_date":"",
+				"tech": "iOS, Android, PhoneGap, Windows Mobile",
+				"desc": "Backend is developed using Ruby on Rails. iPhone applications are developed using Objective C and uses map framework, local database integration, web-service calls and remote server synchronization. Android applications are developed using Android SDK (Java platform).",
+				"img": "images/Leapset.jpg"
+			}
+		}, 
+		{
+			"project": {
+				"name":"addthis",
+				"customer":"AddThis",
+				"category":"Mobile",
+				"status":"closed",
+				"start_date":"21 Mar,2014",
+				"end_date":"18th Feb,2015",
+				"tech": "Objective C, iPhone SDK",
+				"desc": "Software Development Kit that allows an iOS application developer to embed social sharing functionality into their own application.",
+				"img": "images/carConf.png"
+			}
+		},
+		{
+			"project": {
+				"name":"Bozzuto - Octagon",
+				"customer":"MEPT Octagon LLC",
+				"category":"",
+				"status":"open",
+				"start_date":"",
+				"end_date":"",
+				"tech": "HTML5, PHP",
+				"desc": "This project involves hosting the Octagon website which is a Bozzuto managed property. Minor tweaks/ changes are in scope at the prevailing development rates. Hosting is automatically renewed each year.",
+				"img": "images/fitness.png"
+			}
+		},
+		{
+			"project": {
+				"name":"VR Assurance",
+				"customer":"Novasiz",
+				"category":"Web app",
+				"status":"open",
+				"start_date":"12 Dec,2015",
+				"end_date":"",
+				"tech": "CodeIgniter, PHP",
+				"desc": "This project is to provide updates to VR Assurance app delivered to the client earlier. ",
+				"img": "images/gofish.png"
+			}
+		},
+		{
+			"project": {
+				"name":"Homestead Support",
+				"customer":"Nextwaretech",
+				"category":"Mobile",
+				"status":"open",
+				"start_date":"23 Sept,2015",
+				"end_date":"18 May,2016",
+				"tech": "AngularJS, RoR",
+				"desc": "The project is for providing serverside and mobile support for Homestead.",
+				"img": "images/insurance.png"
+			}
+		},
+		{
+			"project": {
+				"name":"Homestead Support",
+				"customer":"Nextwaretech",
+				"category":"Mobile",
+				"status":"open",
+				"start_date":"23 Sept,2015",
+				"end_date":"18 May,2016",
+				"tech": "AngularJS, RoR",
+				"desc": "The project is for providing serverside and mobile support for Homestead.",
+				"img": "images/kaBoom.png"
+			}
+		},
+		{
+			"project": {
+				"name":"Homestead Support",
+				"customer":"Nextwaretech",
+				"category":"Mobile",
+				"status":"open",
+				"start_date":"23 Sept,2015",
+				"end_date":"18 May,2016",
+				"tech": "AngularJS, RoR",
+				"desc": "The project is for providing serverside and mobile support for Homestead.",
+				"img": "images/kinect.png"
+			}
+		},
+		{
+			"project": {
+				"name":"Bozzuto - Octagon",
+				"customer":"MEPT Octagon LLC",
+				"category":"",
+				"status":"open",
+				"start_date":"",
+				"end_date":"",
+				"tech": "HTML5, PHP",
+				"desc": "This project involves hosting the Octagon website which is a Bozzuto managed property. Minor tweaks/ changes are in scope at the prevailing development rates. Hosting is automatically renewed each year.",
+				"img": "images/netstream.png"
+			}
+		},
+		{
+			"project": {
+				"name":"VR Assurance",
+				"customer":"Novasiz",
+				"category":"Web app",
+				"status":"open",
+				"start_date":"12 Dec,2015",
+				"end_date":"",
+				"tech": "CodeIgniter, PHP",
+				"desc": "This project is to provide updates to VR Assurance app delivered to the client earlier. ",
+				"img": "images/nfc.png"
+			}
+		},
+		{
+			"project": {
+				"name":"Homestead Support",
+				"customer":"Nextwaretech",
+				"category":"Mobile",
+				"status":"open",
+				"start_date":"23 Sept,2015",
+				"end_date":"18 May,2016",
+				"tech": "AngularJS, RoR",
+				"desc": "The project is for providing serverside and mobile support for Homestead.",
+				"img": "images/payPal.png"
+			}
+		},
+		{
+			"project": {
+				"name":"VR Assurance",
+				"customer":"Novasiz",
+				"category":"Web app",
+				"status":"open",
+				"start_date":"12 Dec,2015",
+				"end_date":"",
+				"tech": "CodeIgniter, PHP",
+				"desc": "This project is to provide updates to VR Assurance app delivered to the client earlier. ",
+				"img": "images/pharmacyApp.png"
+			}
+		},
+		{
+			"project": {
+				"name":"Homestead Support",
+				"customer":"Nextwaretech",
+				"category":"Website/cms",
+				"status":"open",
+				"start_date":"23 Sept,2015",
+				"end_date":"18 May,2016",
+				"tech": "AngularJS, RoR",
+				"desc": "The project is for providing serverside and mobile support for Homestead.",
+				"img": "images/vod.png"
+			}
+		}
+	],
+	"technology": [
+		"All",
+		"AngularJS",
+		"RoR",
+		"CodeIgniter",
+		"PHP",
+		"HTML5",
+		"Objective C",
+		"iPhone SDK",
+		"iOS",
+		"Android",
+		"PhoneGap",
+		"Windows Mobile"
+	]
+}
