@@ -1,9 +1,18 @@
+@mixin media($queryString){
+    @media #{$queryString} {
+      @content;
+    }
+}
 .dashboard {
 	background-color: #9d9d9d;
 	position: fixed;
     bottom: 0px;
     padding: 0px;
     top: 52px;
+     @include media("(max-width: 991px)"){
+     	position: relative;
+     	bottom: none;
+     }
 		ul{
 			padding-left: 0px;
 			li {
@@ -61,3 +70,4 @@
     	}
     }
 } 
+

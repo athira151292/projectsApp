@@ -4,6 +4,10 @@
   bottom: 0px;
   padding: 0px;
   top: 52px; }
+  @media (max-width: 991px) {
+    .dashboard {
+      position: relative;
+      bottom: none; } }
   .dashboard ul {
     padding-left: 0px; }
     .dashboard ul li {
