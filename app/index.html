@@ -11,6 +11,7 @@
       <link href= "css/least.min.css" rel="stylesheet" />
       <link href= "css/bootstrap-select.min.css" rel="stylesheet" />
       <link href= "css/jquery-ui.css" rel="stylesheet" />
+      <link href= "css/screen.css" rel="stylesheet" />
    </head>
    <body>
          <header>
@@ -41,7 +42,7 @@
       			<section class="col-xs-12 col-sm-12 col-md-2 col-lg-2 dashboard">
                   <ul class="sidebar">
                      <li class="active"><a href="index.html">Projects</a></li>
-                     <li><a href="#">Add Project</a></li>
+                     <li data-toggle="modal" data-target="#addProj"><a href="#">Add Project</a></li>
                   </ul>
       			</section>
       			<section class="main col-xs-12 col-sm-12 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
@@ -53,15 +54,124 @@
       			</section>
             </div>
    		</section>
+         <!-- add project popup -->
+         <div id="addProj" class="modal fade" role="dialog">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close dismiss" data-dismiss="modal">&times;</button>
+                 <h4 class="modal-title">Add project</h4>
+               </div>
+               <div class="modal-body">
+                 <form class="form-horizontal" id="addForm" method="get" action="" novalidate>
+                    <div class="form-group">
+                      <label class="control-label col-sm-4" for="pname">Project name:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="pname" name="pname" placeholder="Enter project name" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-4" for="cname">Customer:</label>
+                      <div class="col-sm-8"> 
+                        <input type="text" class="form-control" id="cname" name="cname" placeholder="Enter customer name" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-4" for="category">Category:</label>
+                      <div class="col-sm-8"> 
+                        <select id="category" class="selectpicker" name="category">
+                          <option>Mobile</option>
+                          <option>Web App</option>
+                          <option>Website/CMS</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-4" for="status">Status:</label>
+                      <div class="col-sm-8"> 
+                        <select id="status" class="selectpicker" name="status" required>
+                          <option>Open</option>
+                          <option>On Hold</option>
+                          <option>Closed</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-4" for="s_date">Start Date:</label>
+                      <div class="col-sm-8"> 
+                        <input type="date" class="form-control" id="s_date" name="s_date" placeholder="Enter start date">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-4" for="e_date">End Date:</label>
+                      <div class="col-sm-8"> 
+                        <input type="date" class="form-control" id="e_date" name="e_date" placeholder="Enter end date">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-4" for="tech">Technologies used:</label>
+                      <div class="col-sm-8"> 
+                        <input type="text" class="form-control" id="tech" name="tech" placeholder="Enter technologies used" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-4" for="desc">Description:</label>
+                      <div class="col-sm-8"> 
+                        <input type="text" class="form-control" id="desc" name="desc" placeholder="Enter a description" required>
+                      </div>
+                    </div>
+                    <div class="form-group"> 
+                      <div class="col-sm-offset-4 col-sm-2">
+                        <button type="submit" class="savebtn btn btn-default">Save</button>
+                      </div>
+                      <div class="col-sm-2">
+                        <button type="button" class="btn btn-default dismiss"  data-dismiss="modal">Cancel</button>
+                      </div>
+                    </div>
+                  </form>
+               </div>
+             </div>
+           </div>
+         </div>
       <script src = "js/jquery.min.js"></script>
       <script src = "js/bootstrap.min.js"></script>
       <script src = "js/script.js"></script>
       <script src= "js/least.min.js"></script>
       <script src= "js/bootstrap-select.js"></script>
       <script src= "js/jquery-ui.js"></script>
+      <script src= "js/jquery.validate.js"></script>
       <script>
+        var validator = $("#addForm").validate({
+          rules: {
+            pname: "required",
+            cname: "required",
+            status: "required",
+            tech: "required",
+            desc: "required",
+            s_date: {
+              date:true
+            },
+            e_date: {
+              date:true
+            }
+          },
+          messages: {
+            pname: "Project name is required",
+            cname: "Customer name is required",
+            status: "Status is required",
+            tech: "Technologies used are required",
+            desc: "Description is required",
+            s_date: "Date is not valid",
+            e_date: "Date is not valid"
+          },
+          debug: true
+        });
+        $(".dismiss").click(function() {
+            validator.resetForm();
+        });   
          $(document).ready(function(){
                $('.least-gallery').least();
+
          });
       </script>
    </body>

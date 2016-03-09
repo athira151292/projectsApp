@@ -18,7 +18,8 @@
 			li {
 				padding: 10px 15px;
 				font-size: 15px;
-				list-style-type: none;	
+				list-style-type: none;
+				cursor: pointer;	
 					&:hover{
 						background-color: #736C6C;
 					}
@@ -70,4 +71,12 @@
     	}
     }
 } 
+#addProj{
+	.modal-header{
+		background-color: #736C6C;
+		border-top-right-radius: 6px;
+    	border-top-left-radius: 6px;
+    	color: #FFF;
+	}
+}
 
