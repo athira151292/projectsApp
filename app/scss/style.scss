@@ -1,0 +1,48 @@
+.dashboard {
+	background-color: #9d9d9d;
+	position: fixed;
+    bottom: 0px;
+    padding: 0px;
+    top: 52px;
+		ul{
+			padding-left: 0px;
+			li {
+				padding: 10px 15px;
+				font-size: 15px;
+				list-style-type: none;	
+					&:hover{
+						background-color: #736C6C;
+					}
+					&.active{
+						background-color: #736C6C;
+					}		
+				a {
+					color: #FFF;
+					&:hover{
+						text-decoration: none!important;
+					}
+					&:focus{
+						text-decoration: none!important;
+					}
+				}
+			}
+		}
+}
+.main{
+	top: 52px;
+	#least{
+		margin-top: 20px;
+		float: left;
+		.least-preview table td{
+			padding: 5px 15px;
+    		border: 1px solid #DCD4D4;
+		}	    
+	}
+}
+.fpnav {
+	margin-bottom: 0px!important;
+	position: fixed;
+    float: left;
+    width: 100%;
+    z-index: 1000;
+} 

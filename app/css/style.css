@@ -1,0 +1,38 @@
+.dashboard {
+  background-color: #9d9d9d;
+  position: fixed;
+  bottom: 0px;
+  padding: 0px;
+  top: 52px; }
+  .dashboard ul {
+    padding-left: 0px; }
+    .dashboard ul li {
+      padding: 10px 15px;
+      font-size: 15px;
+      list-style-type: none; }
+      .dashboard ul li:hover {
+        background-color: #736C6C; }
+      .dashboard ul li.active {
+        background-color: #736C6C; }
+      .dashboard ul li a {
+        color: #FFF; }
+        .dashboard ul li a:hover {
+          text-decoration: none !important; }
+        .dashboard ul li a:focus {
+          text-decoration: none !important; }
+
+.main {
+  top: 52px; }
+  .main #least {
+    margin-top: 20px;
+    float: left; }
+    .main #least .least-preview table td {
+      padding: 5px 15px;
+      border: 1px solid #DCD4D4; }
+
+.fpnav {
+  margin-bottom: 0px !important;
+  position: fixed;
+  float: left;
+  width: 100%;
+  z-index: 1000; }
