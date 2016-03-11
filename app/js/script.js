@@ -102,15 +102,17 @@ function filterTech(tech,projects,arr){
 		}
 		else{
 			var fromLS = localStorage.getItem("projects");
-			var currentObj = JSON.parse(fromLS);
-			var length = JSON.parse(fromLS).projectDetails.length;
-			for(i=0;i<length;i++){
-				if(currentObj.projectDetails[i].tech==tech){
-					LSarr.push(currentObj.projectDetails[i]);
-					
+			if(fromLS){
+				var currentObj = JSON.parse(fromLS);
+				var length = JSON.parse(fromLS).projectDetails.length;
+				for(i=0;i<length;i++){
+					if(currentObj.projectDetails[i].tech==tech){
+						LSarr.push(currentObj.projectDetails[i]);
+						
+					}
 				}
+				filterLS(LSarr);
 			}
-			filterLS(LSarr);
 		}
 		displayProjects(t);
 }
