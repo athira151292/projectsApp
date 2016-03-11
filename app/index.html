@@ -67,13 +67,13 @@
                     <div class="form-group">
                       <label class="control-label col-sm-4" for="pname">Project name:</label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" id="pname" name="pname" placeholder="Enter project name" required>
+                        <input type="text" class="form-control" id="pname" name="pname" placeholder="Enter project name" autocomplete="off" required>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="control-label col-sm-4" for="cname">Customer:</label>
                       <div class="col-sm-8"> 
-                        <input type="text" class="form-control" id="cname" name="cname" placeholder="Enter customer name" required>
+                        <input type="text" class="form-control" id="cname" name="cname" placeholder="Enter customer name" autocomplete="off" required>
                       </div>
                     </div>
                     <div class="form-group">
@@ -99,25 +99,25 @@
                     <div class="form-group">
                       <label class="control-label col-sm-4" for="s_date">Start Date:</label>
                       <div class="col-sm-8"> 
-                        <input type="date" class="form-control" id="s_date" name="s_date" placeholder="Enter start date">
+                        <input type="date" class="form-control" id="s_date" name="s_date" placeholder="Enter start date" autocomplete="off">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="control-label col-sm-4" for="e_date">End Date:</label>
                       <div class="col-sm-8"> 
-                        <input type="date" class="form-control" id="e_date" name="e_date" placeholder="Enter end date">
+                        <input type="date" class="form-control" id="e_date" name="e_date" placeholder="Enter end date" autocomplete="off">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="control-label col-sm-4" for="tech">Technologies used:</label>
                       <div class="col-sm-8"> 
-                        <input type="text" class="form-control" id="tech" name="tech" placeholder="Enter technologies used" required>
+                        <input type="text" class="form-control" id="tech" name="tech" placeholder="Enter technologies used" autocomplete="off" required>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="control-label col-sm-4" for="desc">Description:</label>
                       <div class="col-sm-8"> 
-                        <input type="text" class="form-control" id="desc" name="desc" placeholder="Enter a description" required>
+                        <input type="text" class="form-control" id="desc" name="desc" placeholder="Enter a description" autocomplete="off" required>
                       </div>
                     </div>
                     <div class="form-group"> 
@@ -142,6 +142,7 @@
       <script src= "js/jquery.validate.js"></script>
       <script>
         var validator = $("#addForm").validate({
+          focusCleanup: true,
           rules: {
             pname: "required",
             cname: "required",
@@ -167,11 +168,12 @@
           debug: true
         });
         $(".dismiss").click(function() {
+            var form = $("#addForm");
             validator.resetForm();
+            form[0].reset();
         });   
          $(document).ready(function(){
                $('.least-gallery').least();
-
          });
       </script>
    </body>
