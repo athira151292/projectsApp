@@ -97,21 +97,24 @@ function filterTech(tech,projects,arr){
 
 	}
 		$(".least-gallery li").remove();
-		if(tech=="All"){
-			displayLSprojects();
-		}
-		else{
-			var fromLS = localStorage.getItem("projects");
-			if(fromLS){
-				var currentObj = JSON.parse(fromLS);
-				var length = JSON.parse(fromLS).projectDetails.length;
-				for(i=0;i<length;i++){
-					if(currentObj.projectDetails[i].tech==tech){
-						LSarr.push(currentObj.projectDetails[i]);
-						
+		var fromLS = localStorage.getItem("projects");
+		if(fromLS){
+			if(tech=="All"){
+				displayLSprojects();
+			}
+			else{
+				
+				if(fromLS){
+					var currentObj = JSON.parse(fromLS);
+					var length = JSON.parse(fromLS).projectDetails.length;
+					for(i=0;i<length;i++){
+						if(currentObj.projectDetails[i].tech==tech){
+							LSarr.push(currentObj.projectDetails[i]);
+							
+						}
 					}
+					filterLS(LSarr);
 				}
-				filterLS(LSarr);
 			}
 		}
 		displayProjects(t);
